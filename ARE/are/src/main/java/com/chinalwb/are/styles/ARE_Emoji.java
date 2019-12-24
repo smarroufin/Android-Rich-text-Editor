@@ -1,8 +1,5 @@
 package com.chinalwb.are.styles;
 
-import android.support.annotation.NonNull;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
@@ -12,17 +9,20 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+
 import com.chinalwb.are.R;
 import com.chinalwb.are.Util;
-import com.chinalwb.are.spans.AreImageSpan;
-import com.chinalwb.are.spans.EmojiSpan;
-
-import com.chinalwb.are.styles.toolbar.ARE_Toolbar;
 import com.chinalwb.are.emojipanel.EmojiGridViewAdapter;
 import com.chinalwb.are.emojipanel.EmojiGroup;
 import com.chinalwb.are.emojipanel.EmojiGroupDesc;
 import com.chinalwb.are.emojipanel.EmojiPagerAdapter;
 import com.chinalwb.are.emojipanel.EmojiPanel;
+import com.chinalwb.are.spans.AreImageSpan;
+import com.chinalwb.are.spans.EmojiSpan;
+import com.chinalwb.are.styles.toolbar.ARE_Toolbar;
 
 import java.util.ArrayList;
 

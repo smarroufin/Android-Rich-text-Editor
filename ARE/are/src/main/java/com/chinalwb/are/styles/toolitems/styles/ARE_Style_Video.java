@@ -14,7 +14,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
-import android.support.v4.content.CursorLoader;
 import android.text.Editable;
 import android.text.Layout;
 import android.text.Spannable;
@@ -25,6 +24,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import androidx.loader.content.CursorLoader;
 
 import com.chinalwb.are.AREditText;
 import com.chinalwb.are.Constants;

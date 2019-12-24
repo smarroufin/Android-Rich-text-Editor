@@ -4,14 +4,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.support.v4.widget.NestedScrollView;
 import android.text.Editable;
 import android.text.Spanned;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
+
+import androidx.core.widget.NestedScrollView;
 
 import com.chinalwb.are.android.inner.Html;
 import com.chinalwb.are.render.AreImageGetter;
