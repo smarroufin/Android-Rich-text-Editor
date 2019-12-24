@@ -18,24 +18,17 @@ import android.text.style.StrikethroughSpan;
 import android.text.style.StyleSpan;
 import android.util.AttributeSet;
 import android.util.TypedValue;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
 import com.chinalwb.are.android.inner.Html;
-import com.chinalwb.are.events.AREMovementMethod;
 import com.chinalwb.are.render.AreImageGetter;
 import com.chinalwb.are.render.AreTagHandler;
-import com.chinalwb.are.spans.ARE_Clickable_Span;
-import com.chinalwb.are.spans.AreImageSpan;
 import com.chinalwb.are.spans.AreSubscriptSpan;
 import com.chinalwb.are.spans.AreSuperscriptSpan;
 import com.chinalwb.are.spans.AreUnderlineSpan;
-import com.chinalwb.are.strategies.AtStrategy;
-import com.chinalwb.are.strategies.ImageStrategy;
-import com.chinalwb.are.strategies.VideoStrategy;
 import com.chinalwb.are.styles.ARE_Helper;
 import com.chinalwb.are.styles.IARE_Style;
 import com.chinalwb.are.styles.toolbar.ARE_Toolbar;
@@ -147,17 +140,6 @@ public class AREditText extends AppCompatEditText {
 
         return itemAt.coerceToStyledText(mContext);
     }
-
-    @Override
-	public boolean onTouchEvent(MotionEvent event) {
-		int off = AREMovementMethod.getTextOffset(this, this.getEditableText(), event);
-		ARE_Clickable_Span[] clickableSpans = this.getText().getSpans(off, off, ARE_Clickable_Span.class);
-		if (clickableSpans.length == 1 && clickableSpans[0] instanceof AreImageSpan) {
-			return true;
-		}
-
-		return super.onTouchEvent(event);
-	}
 
 	/**
 	 * Sets up listeners for controls.
@@ -431,21 +413,4 @@ public class AREditText extends AppCompatEditText {
 	public static void stopMonitor() {
 		MONITORING = false;
 	}
-	/* ----------------------
-	 * Customization part
-	 * ---------------------- */
-
-	private AtStrategy mAtStrategy;
-	public void setAtStrategy(AtStrategy atStrategy) { mAtStrategy = atStrategy; }
-	public AtStrategy getAtStrategy() { return mAtStrategy; }
-
-	// VideoStrategy
-	private VideoStrategy mVideoStrategy;
-	public void setVideoStrategy(VideoStrategy videoStrategy) { mVideoStrategy = videoStrategy; }
-	public VideoStrategy getVideoStrategy() { return mVideoStrategy; }
-
-	// ImageStrategy
-	private ImageStrategy mImageStrategy;
-	public void setImageStrategy(ImageStrategy imageStrategy) { mImageStrategy = imageStrategy; }
-	public ImageStrategy getImageStrategy() { return mImageStrategy; }
 }

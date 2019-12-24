@@ -10,10 +10,7 @@ import android.view.MotionEvent;
 import android.widget.TextView;
 
 import com.chinalwb.are.spans.ARE_Clickable_Span;
-import com.chinalwb.are.spans.AreAtSpan;
-import com.chinalwb.are.spans.AreImageSpan;
 import com.chinalwb.are.spans.AreUrlSpan;
-import com.chinalwb.are.spans.AreVideoSpan;
 import com.chinalwb.are.strategies.AreClickStrategy;
 
 /**
@@ -87,13 +84,7 @@ public class AREMovementMethod extends ArrowKeyMovementMethod {
             Context context = widget.getContext();
             boolean handled = false;
             if (mAreClickStrategy != null && clickableSpans != null && clickableSpans.length > 0) {
-                if (clickableSpans[0] instanceof AreAtSpan) {
-                    handled = mAreClickStrategy.onClickAt(context, (AreAtSpan) clickableSpans[0]);
-                } else if (clickableSpans[0] instanceof AreImageSpan) {
-                    handled = mAreClickStrategy.onClickImage(context, (AreImageSpan) clickableSpans[0]);
-                } else if (clickableSpans[0] instanceof AreVideoSpan) {
-                    handled = mAreClickStrategy.onClickVideo(context, (AreVideoSpan) clickableSpans[0]);
-                } else if (clickableSpans[0] instanceof AreUrlSpan) {
+                if (clickableSpans[0] instanceof AreUrlSpan) {
                     handled = mAreClickStrategy.onClickUrl(context, (AreUrlSpan) clickableSpans[0]);
                 }
             }

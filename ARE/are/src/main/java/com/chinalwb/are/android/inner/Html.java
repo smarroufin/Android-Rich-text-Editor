@@ -16,20 +16,10 @@
 
 package com.chinalwb.are.android.inner;
 
-//import com.android.internal.util.ArrayUtils;
-
 import android.content.Context;
-import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
-import android.media.ThumbnailUtils;
-import android.net.Uri;
-import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.Layout;
 import android.text.Spannable;
@@ -55,18 +45,12 @@ import android.text.style.URLSpan;
 import android.text.style.UnderlineSpan;
 
 import com.chinalwb.are.Constants;
-import com.chinalwb.are.R;
 import com.chinalwb.are.Util;
-import com.chinalwb.are.models.AtItem;
 import com.chinalwb.are.spans.ARE_Span;
-import com.chinalwb.are.spans.AreAtSpan;
 import com.chinalwb.are.spans.AreFontSizeSpan;
 import com.chinalwb.are.spans.AreHrSpan;
-import com.chinalwb.are.spans.AreImageSpan;
 import com.chinalwb.are.spans.AreListSpan;
 import com.chinalwb.are.spans.AreQuoteSpan;
-import com.chinalwb.are.spans.AreUrlSpan;
-import com.chinalwb.are.spans.AreVideoSpan;
 import com.chinalwb.are.spans.EmojiSpan;
 import com.chinalwb.are.spans.ListBulletSpan;
 import com.chinalwb.are.spans.ListNumberSpan;
@@ -953,10 +937,6 @@ class HtmlToSpannedConverter implements ContentHandler {
                 Character.toLowerCase(tag.charAt(0)) == 'h' &&
                 tag.charAt(1) >= '1' && tag.charAt(1) <= '6') {
             startHeading(mSpannableStringBuilder, attributes, tag.charAt(1) - '1');
-        } else if (tag.equalsIgnoreCase("img")) {
-            startImg(mSpannableStringBuilder, attributes, mImageGetter);
-        } else if (tag.equalsIgnoreCase("video")) {
-            startVideo(mSpannableStringBuilder, attributes, mImageGetter);
         } else if (tag.equalsIgnoreCase("hr")) {
             startHr(mSpannableStringBuilder);
         } else if (tag.equalsIgnoreCase("emoji")) {
@@ -1006,8 +986,6 @@ class HtmlToSpannedConverter implements ContentHandler {
             endBlockquote(mSpannableStringBuilder);
         } else if (tag.equalsIgnoreCase("tt")) {
             end(mSpannableStringBuilder, Monospace.class, new TypefaceSpan("monospace"));
-        } else if (tag.equalsIgnoreCase("a")) {
-            endA(mSpannableStringBuilder);
         } else if (tag.equalsIgnoreCase("u")) {
             end(mSpannableStringBuilder, Underline.class, new UnderlineSpan());
         } else if (tag.equalsIgnoreCase("del")) {
@@ -1305,69 +1283,6 @@ class HtmlToSpannedConverter implements ContentHandler {
         }
     }
 
-    private static void startImg(Editable text, Attributes attributes, Html.ImageGetter img) {
-        String src = attributes.getValue("", "src");
-        Drawable d = null;
-        ImageSpan imageSpan = null;
-        if (img != null) {
-            d = img.getDrawable(src);
-            if (src.startsWith(Constants.EMOJI)) {
-                String resIdStr = src.substring(6);
-                int resId = Integer.parseInt(resIdStr);
-                imageSpan = new AreImageSpan(sContext, resId);
-            } else if (src.startsWith("http")) {
-                imageSpan = new AreImageSpan(sContext, d, src);
-            } else {
-                // content://com.android.providers.media.documents/document/image%3A33
-                // Such uri cannot be loaded from AreImageGetter.
-                imageSpan = new AreImageSpan(sContext, Uri.parse(src));
-            }
-        }
-
-        if (d == null) {
-            if (sContext == null) {
-                d = Resources.getSystem().getDrawable(R.drawable.ic_launcher);
-            } else {
-                d = sContext.getResources().getDrawable(R.drawable.ic_launcher);
-            }
-
-            d.setBounds(0, 0, d.getIntrinsicWidth(), d.getIntrinsicHeight());
-        }
-
-        int len = text.length();
-        text.append("\uFFFC");
-
-        text.setSpan(imageSpan, len, text.length(),
-                     Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-    }
-
-    private static void startVideo(Editable text, Attributes attributes, Html.ImageGetter img) {
-        Bitmap thumb = null;
-        String uriPath = attributes.getValue("", "uri");
-        String videoUrl = attributes.getValue("", "src");
-        thumb = ThumbnailUtils.createVideoThumbnail(uriPath, MediaStore.Images.Thumbnails.MINI_KIND);
-        if (thumb == null) {
-            // thumb = null; // TODO should load first frame bitmap
-            thumb = Bitmap.createBitmap(400, 300, Bitmap.Config.ARGB_8888);
-            Canvas canvas = new Canvas(thumb);
-            Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-            paint.setColor(Color.BLACK);
-            canvas.drawRect(0, 0, 400, 300, paint);
-        }
-        Drawable d;
-        ImageSpan imageSpan;
-
-        Bitmap play = BitmapFactory.decodeResource(sContext.getResources(), R.drawable.play);
-        Bitmap video = thumb == null ? play : Util.mergeBitmaps(thumb, play);
-        imageSpan = new AreVideoSpan(sContext, video, uriPath, videoUrl);
-        int len = text.length();
-        text.append("\uFFFC");
-
-        text.setSpan(imageSpan, len, text.length(),
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-    }
-
-
     private static void startHr(Editable text) {
         int len = text.length();
         text.append("\u200B");
@@ -1433,22 +1348,6 @@ class HtmlToSpannedConverter implements ContentHandler {
         }
         String href = attributes.getValue("", "href");
         start(text, new Href(href));
-    }
-
-    private static void endA(Editable text) {
-        At at = getLast(text, At.class);
-        if (at != null) {
-            AtItem atItem = new AtItem(at.mKey, at.mName, at.mColor);
-            AreAtSpan atSpan = new AreAtSpan(atItem);
-            setSpanFromMark(text, at, atSpan);
-            return;
-        }
-        Href h = getLast(text, Href.class);
-        if (h != null) {
-            if (h.mHref != null) {
-                setSpanFromMark(text, h, new AreUrlSpan((h.mHref)));
-            }
-        }
     }
 
 //    private int getHtmlColor(String color) {

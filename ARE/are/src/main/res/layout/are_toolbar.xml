@@ -30,15 +30,6 @@
             android:background="?attr/colorPrimary">
 
             <ImageView
-                android:id="@+id/rteEmoji"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="5dp"
-                android:src="@drawable/emoji"
-                android:visibility="gone"
-                />
-
-            <ImageView
                 android:id="@+id/rteFontsize"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -189,39 +180,6 @@
                 android:layout_height="40dp"
                 android:padding="5dp"
                 android:src="@drawable/alignright" />
-
-            <ImageView
-                android:id="@+id/rteInsertImage"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="5dp"
-                android:src="@drawable/image" />
-
-            <ImageView
-                android:id="@+id/rteInsertVideo"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="5dp"
-                android:src="@drawable/video"
-                />
-
-            <ImageView
-                android:id="@+id/rteAt"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="5dp"
-                android:src="@drawable/at"
-                android:visibility="gone" />
         </LinearLayout>
     </HorizontalScrollView>
-    <LinearLayout
-        android:id="@+id/rteEmojiPanel"
-        android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:visibility="gone"
-        android:gravity="center"
-        android:paddingTop="10dp"
-        android:orientation="horizontal">
-
-    </LinearLayout>
 </merge>

@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--<color name="colorPrimaryX">#3F51B5</color>-->
-    <!--<color name="colorPrimaryDarkX">#303F9F</color>-->
-    <!--<color name="colorAccentX">#FF4081</color>-->
     <array name="colorPickerColors">
         <item>#000000</item>
         <item>#607D8B</item>
@@ -25,8 +22,6 @@
         <item>#E91E63</item>
         <item>#f44336</item>
     </array>
-
-    <color name="black_overlay">#66000000</color>
 
     <array name="colors">
         <item>#000000</item>
