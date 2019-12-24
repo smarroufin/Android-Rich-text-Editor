@@ -8,10 +8,7 @@ import android.widget.ImageView;
 import com.chinalwb.are.AREditText;
 import com.chinalwb.are.spans.AreItalicSpan;
 import com.chinalwb.are.styles.ARE_ABS_Style;
-import com.chinalwb.are.styles.ARE_Helper;
 import com.chinalwb.are.styles.toolitems.IARE_ToolItem_Updater;
-
-import javax.microedition.khronos.egl.EGLDisplay;
 
 public class ARE_Style_Italic extends ARE_ABS_Style<AreItalicSpan> {
 

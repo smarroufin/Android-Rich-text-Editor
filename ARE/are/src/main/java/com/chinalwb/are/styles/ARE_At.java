@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.text.Editable;
 import android.text.Spanned;
-import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.chinalwb.are.AREditText;

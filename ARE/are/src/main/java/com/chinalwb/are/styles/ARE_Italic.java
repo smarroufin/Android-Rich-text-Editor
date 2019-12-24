@@ -7,7 +7,6 @@ import android.widget.ImageView;
 
 import com.chinalwb.are.AREditText;
 import com.chinalwb.are.spans.AreItalicSpan;
-import com.chinalwb.are.styles.toolbar.ARE_Toolbar;
 
 public class ARE_Italic extends ARE_ABS_Style<AreItalicSpan> {
 

@@ -20,12 +20,12 @@ import com.bumptech.glide.request.transition.Transition;
 import com.chinalwb.are.AREditText;
 import com.chinalwb.are.Constants;
 import com.chinalwb.are.Util;
+import com.chinalwb.are.glidesupport.GlideApp;
+import com.chinalwb.are.glidesupport.GlideRequests;
 import com.chinalwb.are.spans.AreImageSpan;
 import com.chinalwb.are.styles.IARE_Image;
 import com.chinalwb.are.styles.IARE_Style;
 import com.chinalwb.are.styles.windows.ImageSelectDialog;
-import com.chinalwb.are.glidesupport.GlideApp;
-import com.chinalwb.are.glidesupport.GlideRequests;
 
 import static com.chinalwb.are.spans.AreImageSpan.ImageType;
 

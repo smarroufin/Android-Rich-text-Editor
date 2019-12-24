@@ -7,7 +7,6 @@ import android.widget.ImageView;
 import com.chinalwb.are.AREditText;
 import com.chinalwb.are.spans.AreSuperscriptSpan;
 import com.chinalwb.are.styles.ARE_ABS_Style;
-import com.chinalwb.are.styles.ARE_Helper;
 import com.chinalwb.are.styles.toolitems.IARE_ToolItem_Updater;
 
 /**

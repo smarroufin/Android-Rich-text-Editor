@@ -6,13 +6,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.chinalwb.are.AREditText;
-import com.chinalwb.are.Util;
 import com.chinalwb.are.spans.AreBoldSpan;
 import com.chinalwb.are.styles.ARE_ABS_Style;
-import com.chinalwb.are.styles.ARE_Helper;
 import com.chinalwb.are.styles.toolitems.IARE_ToolItem_Updater;
-
-import java.nio.charset.CharsetEncoder;
 
 public class ARE_Style_Bold extends ARE_ABS_Style<AreBoldSpan> {
 

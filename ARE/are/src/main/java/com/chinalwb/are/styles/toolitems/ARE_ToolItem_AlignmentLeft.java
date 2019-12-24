@@ -11,7 +11,6 @@ import com.chinalwb.are.R;
 import com.chinalwb.are.Util;
 import com.chinalwb.are.styles.IARE_Style;
 import com.chinalwb.are.styles.toolitems.styles.ARE_Style_Alignment;
-import com.chinalwb.are.styles.toolitems.styles.ARE_Style_Hr;
 
 /**
  * Created by wliu on 13/08/2018.

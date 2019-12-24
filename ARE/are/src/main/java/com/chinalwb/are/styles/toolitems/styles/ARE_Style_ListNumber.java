@@ -14,7 +14,6 @@ import com.chinalwb.are.Util;
 import com.chinalwb.are.spans.ListBulletSpan;
 import com.chinalwb.are.spans.ListNumberSpan;
 import com.chinalwb.are.styles.ARE_ABS_FreeStyle;
-import com.chinalwb.are.styles.toolitems.IARE_ToolItem_Updater;
 
 /**
  * All Rights Reserved.

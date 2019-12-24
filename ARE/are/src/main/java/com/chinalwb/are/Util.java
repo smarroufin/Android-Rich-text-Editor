@@ -28,9 +28,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.Arrays;
-import java.util.Collections;
-
 /**
  * All Rights Reserved.
  *

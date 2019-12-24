@@ -1,12 +1,10 @@
 package com.chinalwb.are.styles.windows;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.PopupWindow;
-import android.widget.SeekBar;
 
 import com.chinalwb.are.R;
 import com.chinalwb.are.Util;

@@ -3,7 +3,6 @@ package com.chinalwb.are.strategies;
 import android.content.Context;
 import android.text.style.URLSpan;
 
-import com.chinalwb.are.spans.ARE_Clickable_Span;
 import com.chinalwb.are.spans.AreAtSpan;
 import com.chinalwb.are.spans.AreImageSpan;
 import com.chinalwb.are.spans.AreVideoSpan;

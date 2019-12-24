@@ -1,9 +1,8 @@
 package com.chinalwb.are.styles;
 
-import com.chinalwb.are.Constants;
-
 import android.view.View;
-import android.widget.ImageView;
+
+import com.chinalwb.are.Constants;
 
 public class ARE_Helper {
 

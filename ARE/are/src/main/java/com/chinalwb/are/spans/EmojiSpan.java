@@ -1,12 +1,12 @@
 package com.chinalwb.are.spans;
 
-import java.lang.ref.WeakReference;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.text.style.DynamicDrawableSpan;
+
+import java.lang.ref.WeakReference;
 
 public class EmojiSpan extends DynamicDrawableSpan implements ARE_Span {
 

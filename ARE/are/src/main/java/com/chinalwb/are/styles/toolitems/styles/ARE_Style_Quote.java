@@ -12,7 +12,6 @@ import com.chinalwb.are.AREditText;
 import com.chinalwb.are.Constants;
 import com.chinalwb.are.Util;
 import com.chinalwb.are.spans.AreQuoteSpan;
-import com.chinalwb.are.styles.ARE_Helper;
 import com.chinalwb.are.styles.IARE_Style;
 import com.chinalwb.are.styles.toolitems.IARE_ToolItem_Updater;
 

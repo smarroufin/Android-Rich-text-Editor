@@ -2,9 +2,7 @@ package com.chinalwb.are.styles.toolitems;
 
 import android.content.Context;
 import android.text.Editable;
-import android.text.style.CharacterStyle;
 import android.text.style.QuoteSpan;
-import android.text.style.StyleSpan;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -15,7 +13,6 @@ import com.chinalwb.are.R;
 import com.chinalwb.are.Util;
 import com.chinalwb.are.spans.AreQuoteSpan;
 import com.chinalwb.are.styles.IARE_Style;
-import com.chinalwb.are.styles.toolitems.styles.ARE_Style_Bold;
 import com.chinalwb.are.styles.toolitems.styles.ARE_Style_Quote;
 
 /**

@@ -14,7 +14,6 @@ import com.chinalwb.are.Constants;
 import com.chinalwb.are.R;
 import com.chinalwb.are.Util;
 import com.chinalwb.are.styles.IARE_Style;
-import com.chinalwb.are.styles.toolitems.styles.ARE_Style_Bold;
 import com.chinalwb.are.styles.toolitems.styles.ARE_Style_Italic;
 
 /**

@@ -6,9 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.chinalwb.are.AREditText;
-import com.chinalwb.are.AREditor;
 import com.chinalwb.are.Util;
-import com.chinalwb.are.spans.AreQuoteSpan;
 import com.chinalwb.are.styles.IARE_Style;
 import com.chinalwb.are.styles.toolbar.IARE_Toolbar;
 

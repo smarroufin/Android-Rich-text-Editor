@@ -3,7 +3,6 @@ package com.chinalwb.are.spans;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.text.Layout;
-import android.text.style.LeadingMarginSpan;
 import android.text.style.QuoteSpan;
 
 import com.chinalwb.are.Constants;

@@ -9,11 +9,8 @@ import com.chinalwb.are.AREditText;
 import com.chinalwb.are.Constants;
 import com.chinalwb.are.spans.AreFontSizeSpan;
 import com.chinalwb.are.styles.ARE_ABS_Dynamic_Style;
-import com.chinalwb.are.styles.toolbar.ARE_Toolbar;
 import com.chinalwb.are.styles.windows.FontSizeChangeListener;
 import com.chinalwb.are.styles.windows.FontsizePickerWindow;
-
-import javax.microedition.khronos.egl.EGLDisplay;
 
 public class ARE_Style_FontSize extends ARE_ABS_Dynamic_Style<AreFontSizeSpan> implements FontSizeChangeListener {
 

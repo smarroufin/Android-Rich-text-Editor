@@ -1,11 +1,6 @@
 package com.chinalwb.are.styles;
 
-import android.annotation.SuppressLint;
 import android.text.Editable;
-import android.text.Spannable;
-import android.text.SpannableStringBuilder;
-import android.text.style.AbsoluteSizeSpan;
-import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -15,7 +10,6 @@ import com.chinalwb.are.AREditText;
 import com.chinalwb.are.Constants;
 import com.chinalwb.are.Util;
 import com.chinalwb.are.spans.AreFontSizeSpan;
-import com.chinalwb.are.spans.AreForegroundColorSpan;
 import com.chinalwb.are.styles.toolbar.ARE_Toolbar;
 import com.chinalwb.are.styles.windows.FontSizeChangeListener;
 import com.chinalwb.are.styles.windows.FontsizePickerWindow;

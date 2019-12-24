@@ -11,10 +11,8 @@ import com.chinalwb.are.Constants;
 import com.chinalwb.are.R;
 import com.chinalwb.are.Util;
 import com.chinalwb.are.spans.AreSubscriptSpan;
-import com.chinalwb.are.spans.AreSuperscriptSpan;
 import com.chinalwb.are.styles.IARE_Style;
 import com.chinalwb.are.styles.toolitems.styles.ARE_Style_Subscript;
-import com.chinalwb.are.styles.toolitems.styles.ARE_Style_Superscript;
 
 /**
  * Created by wliu on 13/08/2018.

@@ -6,7 +6,6 @@ import android.text.Spannable;
 import android.text.method.ArrowKeyMovementMethod;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
-import android.text.style.URLSpan;
 import android.view.MotionEvent;
 import android.widget.TextView;
 
@@ -16,8 +15,6 @@ import com.chinalwb.are.spans.AreImageSpan;
 import com.chinalwb.are.spans.AreUrlSpan;
 import com.chinalwb.are.spans.AreVideoSpan;
 import com.chinalwb.are.strategies.AreClickStrategy;
-import com.chinalwb.are.styles.ARE_Underline;
-import com.chinalwb.are.styles.ARE_Video;
 
 /**
  * <p>

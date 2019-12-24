@@ -10,7 +10,6 @@ import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.AlignmentSpan;
 import android.text.style.ImageSpan;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -21,11 +20,11 @@ import com.bumptech.glide.request.transition.Transition;
 import com.chinalwb.are.AREditText;
 import com.chinalwb.are.Constants;
 import com.chinalwb.are.Util;
+import com.chinalwb.are.glidesupport.GlideApp;
+import com.chinalwb.are.glidesupport.GlideRequests;
 import com.chinalwb.are.spans.AreImageSpan;
 import com.chinalwb.are.styles.toolbar.ARE_Toolbar;
 import com.chinalwb.are.styles.windows.ImageSelectDialog;
-import com.chinalwb.are.glidesupport.GlideApp;
-import com.chinalwb.are.glidesupport.GlideRequests;
 
 import static com.chinalwb.are.spans.AreImageSpan.ImageType;
 

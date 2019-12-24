@@ -14,8 +14,6 @@ import com.chinalwb.are.spans.ListBulletSpan;
 import com.chinalwb.are.spans.ListNumberSpan;
 import com.chinalwb.are.styles.toolbar.ARE_Toolbar;
 
-import java.util.List;
-
 /**
  * All Rights Reserved.
  *

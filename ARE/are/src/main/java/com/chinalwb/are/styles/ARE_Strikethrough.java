@@ -1,7 +1,5 @@
 package com.chinalwb.are.styles;
 
-import android.text.Editable;
-import android.text.Spanned;
 import android.text.style.StrikethroughSpan;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -9,7 +7,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.chinalwb.are.AREditText;
-import com.chinalwb.are.Util;
 
 public class ARE_Strikethrough extends ARE_ABS_Style<StrikethroughSpan> {
 
