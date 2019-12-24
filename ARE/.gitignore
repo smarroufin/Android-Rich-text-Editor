@@ -1,0 +1,16 @@
+# Gradle
+.gradle/
+
+# IntelliJ
+.idea/*
+!.idea/codeStyles
+!.idea/inspectionProfiles
+*.iml
+
+# Android
+build/
+captures/
+local.properties
+
+# MacOS
+.DS_Store
