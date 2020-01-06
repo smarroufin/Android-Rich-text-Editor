@@ -1,3 +1,12 @@
+# Forked from [Android Rich text Editor](https://github.com/chinalwb/Android-Rich-text-Editor/) for specific usage
+
+## 0.2.0
+- updated dependencies
+- migrated to androidx
+- lightened library weight by removing resources
+
+===
+
 [![Download](https://api.bintray.com/packages/chinalwb/are/are/images/download.svg)](https://bintray.com/chinalwb/are/are/_latestVersion) 
 [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
  
