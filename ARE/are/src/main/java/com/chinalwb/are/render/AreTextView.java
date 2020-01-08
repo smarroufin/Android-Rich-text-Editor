@@ -68,9 +68,8 @@ public class AreTextView extends AppCompatTextView {
 
     private Spanned getSpanned(String html) {
         Html.sContext = mContext;
-        Html.ImageGetter imageGetter = new AreImageGetter(mContext, this);
         Html.TagHandler tagHandler = new AreTagHandler();
-        return Html.fromHtml(html, Html.FROM_HTML_SEPARATOR_LINE_BREAK_PARAGRAPH, imageGetter, tagHandler);
+        return Html.fromHtml(html, Html.FROM_HTML_SEPARATOR_LINE_BREAK_PARAGRAPH, null, tagHandler);
     }
 
     /**

@@ -12,7 +12,6 @@ import android.widget.RelativeLayout;
 import androidx.core.widget.NestedScrollView;
 
 import com.chinalwb.are.android.inner.Html;
-import com.chinalwb.are.render.AreImageGetter;
 import com.chinalwb.are.render.AreTagHandler;
 import com.chinalwb.are.styles.toolbar.ARE_Toolbar;
 
@@ -250,9 +249,8 @@ public class AREditor extends RelativeLayout {
      */
     public void fromHtml(String html) {
         Html.sContext = mContext;
-        Html.ImageGetter imageGetter = new AreImageGetter(mContext, this.mAre);
         Html.TagHandler tagHandler = new AreTagHandler();
-        Spanned spanned = Html.fromHtml(html, Html.FROM_HTML_SEPARATOR_LINE_BREAK_PARAGRAPH, imageGetter, tagHandler);
+        Spanned spanned = Html.fromHtml(html, Html.FROM_HTML_SEPARATOR_LINE_BREAK_PARAGRAPH, null, tagHandler);
         AREditText.stopMonitor();
         this.mAre.getEditableText().append(spanned);
         AREditText.startMonitor();

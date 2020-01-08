@@ -24,7 +24,6 @@ import android.view.inputmethod.EditorInfo;
 import androidx.appcompat.widget.AppCompatEditText;
 
 import com.chinalwb.are.android.inner.Html;
-import com.chinalwb.are.render.AreImageGetter;
 import com.chinalwb.are.render.AreTagHandler;
 import com.chinalwb.are.spans.AreSubscriptSpan;
 import com.chinalwb.are.spans.AreSuperscriptSpan;
@@ -127,9 +126,8 @@ public class AREditText extends AppCompatEditText {
         String htmlText = itemAt.getHtmlText();
         if (htmlText != null) {
             try {
-                Html.ImageGetter imageGetter = new AreImageGetter(mContext, this);
                 Html.TagHandler tagHandler = new AreTagHandler();
-                CharSequence newText = Html.fromHtml(htmlText, Html.FROM_HTML_SEPARATOR_LINE_BREAK_PARAGRAPH, imageGetter, tagHandler);
+                CharSequence newText = Html.fromHtml(htmlText, Html.FROM_HTML_SEPARATOR_LINE_BREAK_PARAGRAPH, null, tagHandler);
                 if (newText != null) {
                     return newText;
                 }
@@ -377,9 +375,8 @@ public class AREditText extends AppCompatEditText {
      */
     public void fromHtml(String html) {
         Html.sContext = mContext;
-        Html.ImageGetter imageGetter = new AreImageGetter(mContext, this);
         Html.TagHandler tagHandler = new AreTagHandler();
-        Spanned spanned = Html.fromHtml(html, Html.FROM_HTML_SEPARATOR_LINE_BREAK_PARAGRAPH, imageGetter, tagHandler);
+        Spanned spanned = Html.fromHtml(html, Html.FROM_HTML_SEPARATOR_LINE_BREAK_PARAGRAPH, null, tagHandler);
         stopMonitor();
         this.getEditableText().append(spanned);
         startMonitor();
